@@ -115,7 +115,7 @@ class ListFragment : Fragment(),SearchView.OnQueryTextListener {
             }
             R.id.menu_aboutApp -> {
                 val builder = AlertDialog.Builder(requireContext())
-                  builder.setPositiveButton("Yes") { _,_ ->
+                  builder.setPositiveButton("Okay") { _,_ ->
 
                 }
                 builder.setTitle("Delete this ToDo")
