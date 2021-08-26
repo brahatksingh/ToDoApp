@@ -31,4 +31,9 @@
         android:title="Clear All"
         app:showAsAction="never"/>
 
+    <item
+        android:id="@+id/menu_aboutApp"
+        android:title="About"
+        app:showAsAction="never"/>
+
 </menu>

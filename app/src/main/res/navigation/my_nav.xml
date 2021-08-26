@@ -22,6 +22,9 @@
             app:exitAnim="@anim/go_up"
             app:popEnterAnim="@anim/come_down_from_up"
             app:popExitAnim="@anim/go_down" />
+        <action
+            android:id="@+id/action_listFragment_to_aboutFragment"
+            app:destination="@id/aboutFragment" />
     </fragment>
     <fragment
         android:id="@+id/addFragment"

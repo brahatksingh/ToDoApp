@@ -113,6 +113,15 @@ class ListFragment : Fragment(),SearchView.OnQueryTextListener {
                     adapter.setData(it)
                 })
             }
+            R.id.menu_aboutApp -> {
+                val builder = AlertDialog.Builder(requireContext())
+                  builder.setPositiveButton("Yes") { _,_ ->
+
+                }
+                builder.setTitle("Delete this ToDo")
+                builder.setMessage("Created by Brahat K Singh.\nAll Rights Reserved.\nThis is a github demo copy.\nNo Distribution allowed.")
+                builder.create().show()
+            }
             else -> {
                 // Nothing
             }
