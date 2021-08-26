@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/listFragment">
+
+    <fragment
+        android:id="@+id/listFragment"
+        android:name="com.brahatksingh.to_doapp.Fragments.List.ListFragment"
+        android:label="ToDos"
+        tools:layout="@layout/fragment_list" >
+        <action
+            android:id="@+id/action_listFragment_to_addFragment"
+            app:destination="@id/addFragment"
+            app:enterAnim="@anim/from_bottom_right_to_top_left"
+            app:popExitAnim="@anim/from_topleft_to_bottomright" />
+        <action
+            android:id="@+id/action_listFragment_to_updateFragment"
+            app:destination="@id/updateFragment"
+            app:enterAnim="@anim/come_up_from_down"
+            app:exitAnim="@anim/go_up"
+            app:popEnterAnim="@anim/come_down_from_up"
+            app:popExitAnim="@anim/go_down" />
+    </fragment>
+    <fragment
+        android:id="@+id/addFragment"
+        android:name="com.brahatksingh.to_doapp.Fragments.Add.AddFragment"
+        android:label="New ToDo"
+        tools:layout="@layout/fragment_add" >
+        <action
+            android:id="@+id/action_addFragment_to_listFragment"
+            app:destination="@id/listFragment"
+            app:exitAnim="@anim/from_topleft_to_bottomright"
+            app:popUpTo="@id/listFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateFragment"
+        android:name="com.brahatksingh.to_doapp.Fragments.Update.UpdateFragment"
+        android:label="Edit A Todo"
+        tools:layout="@layout/fragment_update" >
+        <action
+            android:id="@+id/action_updateFragment_to_listFragment"
+            app:destination="@id/listFragment"
+            app:enterAnim="@anim/come_down_from_up"
+            app:exitAnim="@anim/go_down"
+            app:popUpTo="@id/listFragment"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="currentItem"
+            app:argType="com.brahatksingh.to_doapp.Data.Models.ToDoData" />
+    </fragment>
+</navigation>

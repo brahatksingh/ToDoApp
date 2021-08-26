@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/update_fragment_menu_save"
+        android:title="Save"
+        android:icon="@drawable/ic_baseline_check_24"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/update_fragment_menu_delete"
+        android:title="Delete"
+        android:icon="@drawable/ic_baseline_delete_outline_24"
+        app:showAsAction="ifRoom"/>
+
+</menu>
